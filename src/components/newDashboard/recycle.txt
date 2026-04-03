@@ -1,0 +1,91 @@
+<SimpleGrid
+        columns={{ base: 1, md: 2, lg: 3, "2xl": 6 }}
+        gap='20px'
+        mb='20px'>
+        {/* hiMdBarChart */}
+        <MiniStatistics
+          startContent={
+            <IconBox
+              w='20px'
+              h='20px'
+              bg={boxBg}
+              icon={
+                <Icon w='20px' h='20px' as={MdLockOpen} color={brandColor} />
+              }
+            />
+          }
+          name='Open Cases'
+          value={isLoading ? 'Loading..' : data?.OpenCases}
+        />
+        <MiniStatistics
+          startContent={
+            <IconBox
+              w='56px'
+              h='56px'
+              bg={boxBg}
+              icon={
+                <Icon w='32px' h='32px' as={MdPendingActions} color={brandColor} />
+              }
+            />
+          }
+          name='Urgent Action Required'
+          value={isLoading ? 'Loading..' : data?.UrgentActionRequired}
+        />
+        <MiniStatistics startContent={
+          <IconBox
+            w='56px'
+            h='56px'
+            bg={boxBg}
+            icon={
+              <Icon w='32px' h='32px' as={MdAttachMoney} color={brandColor} />
+            }
+          />
+        } name='Lost Revenue' value={isLoading ? 'Loading..' : '$' + data?.LostRevenueAndFines} />
+        <MiniStatistics
+          //growth='+23%' endContent={
+          //   <Flex me='-16px' mt='10px'>
+          //     <FormLabel htmlFor='balance'>
+          //       <Avatar src={Usa} />
+          //     </FormLabel>
+          //     <Select
+          //       id='balance'
+          //       variant='mini'
+          //       mt='5px'
+          //       me='0px'
+          //       defaultValue='usd'>
+          //       <option value='usd'>USD</option>
+          //       <option value='eur'>EUR</option>
+          //       <option value='gba'>GBA</option>
+          //     </Select>
+          //   </Flex>
+          // }
+          name='Potential Revenue Loss'
+          value={isLoading ? 'Loading..' : '$' + data?.PotentialRevenueLoss}
+        />
+        <MiniStatistics
+          startContent={
+            <IconBox
+              w='56px'
+              h='56px'
+              bg='linear-gradient(90deg, #4481EB 0%, #04BEFE 100%)'
+              icon={<Icon w='28px' h='28px' as={MdAddTask} color='white' />}
+            />
+          }
+          name='Total Closed Cases'
+          value={isLoading ? 'Loading..' : data?.TotalCases}
+        />
+        <MiniStatistics
+          startContent={
+            <IconBox
+              w='56px'
+              h='56px'
+              bg={boxBg}
+              icon={
+                <Icon w='32px' h='32px' as={MdPercent} color={brandColor} />
+              }
+            />
+          }
+          name='Percentage'
+          value={isLoading ? 'Loading..' : ((data?.Percentage?.expired / data?.Percentage?.totalStatus) * 100).toFixed(0)}
+        />
+      </SimpleGrid>

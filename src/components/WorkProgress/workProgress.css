@@ -1,0 +1,30 @@
+/* Center align header text and allow wrapping */
+.custom-header  {
+    white-space: normal !important; /* Allows wrapping */
+    line-height: 1.2 !important; /* Adjust line height */
+    overflow: hidden; /* Prevents overflow */
+    text-overflow: ellipsis; /* Adds an ellipsis for overflowed text */
+    word-break: break-word; /* Ensures wrapping */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-bottom: '1px solid';
+    text-transform:'uppercase';
+    color: '#a0aec0';
+    font-size: '11px';
+    font-weight:'700';
+  }
+  
+  /* Center align row cell text */
+  .custom-cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height:20px !important;
+    border:none !important;
+    display: flex;
+    justify-content: center !important;
+  }
+  

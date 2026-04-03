@@ -1,0 +1,26 @@
+[
+  {
+    "name":"Avoided Chargebacks",
+    "value":10 
+  },
+  {
+    "name":"Fines Saved",
+    "value":11   
+  },
+  {
+    "name":"In Progress",
+    "value":12 
+  },
+  {
+    "name":"Projected Savings",
+    "value":13   
+  },
+  {
+    "name":"Cases won",
+    "value":14   
+  },
+  {
+    "name":"Saved Revenue",
+    "value":13   
+  }
+]

@@ -1,0 +1,14 @@
+/* .date >.css-1xhypcz-MuiStack-root{
+    padding-top: 0 !important;
+} */
+.datePicker{
+    width: 270px;
+    /* border-radius:'10px'; */
+}
+
+@media only screen and (min-width: 768px) {
+    .datePicker{
+        width: 485px;
+        /* border-radius:'10px'; */
+    }
+  }
